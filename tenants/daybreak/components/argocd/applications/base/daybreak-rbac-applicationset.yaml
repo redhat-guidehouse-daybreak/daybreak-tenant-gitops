@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: daybreak-tenant-rbac
+spec:
+  generators:
+    - list:
+        elements:
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
+              name: daybreak-tenant-rbac-dev
+              path: tenants/daybreak/components/rbac/overlays/dev
+  template:
+    metadata:
+      name: '{{values.name}}'
+    spec:
+      destination:
+        server: https://kubernetes.default.svc
+      project: daybreak-tenant
+      source:
+        path: '{{values.path}}'
+        repoURL: patch-me-see-tenant-overlays
+        targetRevision: patch-me-see-tenant-overlays
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true

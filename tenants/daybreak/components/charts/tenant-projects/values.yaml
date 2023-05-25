@@ -1,0 +1,36 @@
+gitops-tenant:
+  fullnameOverride: daybreak
+
+  adminGroup:
+    members:
+      - opentlc-mgr
+      - user1
+      - admin
+
+  namespaces:
+    - nameSuffix: gitops
+      role: gitops
+      adminGroupRole: admin
+    - nameSuffix: dev
+      role: dev
+      nameOverride: ""
+      adminGroupRole: admin
+      createOperatorGroup: true
+
+  additionalRoles:
+    - name: sealed-secrets-deployer
+      subject:
+        name: argocd-argocd-application-controller
+      rules:
+        - verbs:
+            - get
+            - list
+            - watch
+            - create
+            - update
+            - patch
+            - delete
+          apiGroups:
+            - 'bitnami.com'
+          resources:
+            - 'sealedsecrets'

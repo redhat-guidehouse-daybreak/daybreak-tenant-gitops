@@ -1,0 +1,13 @@
+argocd:
+  fullnameOverride: argocd
+  rbac:
+    policy: |-
+      g, system:cluster-admins, role:admin
+      g, daybreak-admins, role:admin
+      g, pipeline, role:admin
+    scopes: "[accounts,groups]"
+  projects:
+    - name: daybreak-dev
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: daybreak-dev
