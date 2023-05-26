@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/source/repoURL
-  value: 'https://github.com/redhat-guidehouse-daybreak/daybreak-application-gitops.git'
+  value: 'https://github.com/redhat-guidehouse-daybreak/daybreak-tenant-gitops.git'
 - op: replace
   path: /spec/source/targetRevision
   value: main
