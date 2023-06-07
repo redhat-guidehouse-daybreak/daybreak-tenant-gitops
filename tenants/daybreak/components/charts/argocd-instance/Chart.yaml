@@ -8,5 +8,5 @@ version: 0.1.0
 
 dependencies:
   - name: "argocd"
-    version: "0.4.2"
+    version: "0.4.3"
     repository: "https://rh-datascience-and-edge-practice.github.io/helm-charts/"
