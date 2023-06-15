@@ -1,0 +1,7 @@
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: fhir-sa
+  namespace: fhir-dev
+imagePullSecrets:
+  - name: ghcr-guidehouse-secret
