@@ -7,6 +7,7 @@ gitops-tenant:
       - user1
       - admin
       - 00u8gpqtztDpjYK2d1d7
+      - 00u8gpsyahAohQBVS1d7
 
   namespaces:
     - nameSuffix: gitops
