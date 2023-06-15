@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../../tenants/daybreak/tenant/overlays/default
+  - github-pull-secret.yaml
