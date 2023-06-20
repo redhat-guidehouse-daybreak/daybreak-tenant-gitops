@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
   - fhir-sa.yaml
   - ghcr-guidehouse-secret.yaml
+  - api-manager.yaml
   - ../../components/argocd/applications/overlays/default
   - ../../components/argocd/projects/overlays/default
