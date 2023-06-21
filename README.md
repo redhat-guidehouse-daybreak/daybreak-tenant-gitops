@@ -37,3 +37,9 @@ Additional ArgoCD Application objects will be created and synced in OpenShift Gi
 ## After Bootstrap
 Need to update github access token. Login to cluster management console, 
 select "ghcr-guidehouse-secret" secret, and update the password token for .dockerconfigjson. This password value should be the github access token used to access guidehouse github repo.
+
+## Custom Domain
+The wildcard custom domain for guidehouse is *.daybreak.cs.guidehouse.com. You will need to contact Guidehouse IT to create a wildcard certificate for the domain. Then go to cluster management console to update tls-key and tls-crt in guidehouse-tls secret. tls-key is the provided private key, tls-crt is the public certificate with full chain.
+
+After secret is created, you need to recreate the custom domain, go to bootstrap/base folder, run -
+`oc delete -f custom-domain.yaml` and then run `oc apply -f custom-domain.yaml`
