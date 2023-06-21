@@ -6,4 +6,4 @@ resources:
   - github-pull-secret.yaml
   - ghcr-guidehouse-secret.yaml
   - fhir-sa.yaml
-  - api-manager.yaml
+  - 3scale-namespace.yaml
