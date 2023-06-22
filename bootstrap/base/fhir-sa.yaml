@@ -2,6 +2,6 @@ kind: ServiceAccount
 apiVersion: v1
 metadata:
   name: fhir-sa
-  namespace: fhir-dev
+  namespace: daybreak-gitops
 imagePullSecrets:
   - name: ghcr-guidehouse-secret
