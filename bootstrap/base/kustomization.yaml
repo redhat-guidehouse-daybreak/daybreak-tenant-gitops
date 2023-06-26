@@ -6,5 +6,5 @@ resources:
   - github-pull-secret.yaml
   - ghcr-guidehouse-secret.yaml
   - fhir-sa.yaml
-  - custom-domain-tls.yaml
-  - custom-domain.yaml
+ # - custom-domain-tls.yaml
+ # - custom-domain.yaml
