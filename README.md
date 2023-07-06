@@ -38,6 +38,10 @@ Additional ArgoCD Application objects will be created and synced in OpenShift Gi
 Need to update github access token. Login to cluster management console, 
 select "ghcr-guidehouse-secret" secret, and update the password token for .dockerconfigjson. This password value should be the github access token used to access guidehouse github repo.
 
+Select "redhat-guidehouse-github-secret", update username and password. These are used to access github repo https://github.com/redhat-guidehouse-daybreak/openshift-fhirserver-charts to deploy argocd applicationsets. 
+
+Select "daybreak-app-secrets" secret, and update the KEYCLOAK_ADMIN and KEYCLOAK_ADMIN_PASSWORD, these are admin user name and password will be used for keycloak.
+
 ## Custom Domain
 The default custom domain for the cluster is `apps.<cluster-name>.....openshiftapps.com`. You can get this by executing `oc describe ingresscontroller default -n openshift-ingress-operator`
 Before you run bootstrap for daybreak-application-gtops, you must update `environments/dev/3scale/overlay/default/patch-domain.yaml` with the correct domain name
