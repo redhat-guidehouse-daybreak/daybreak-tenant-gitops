@@ -5,7 +5,6 @@ resources:
   - ../../tenants/daybreak/tenant/overlays/default
   - github-pull-secret.yaml
   - ghcr-guidehouse-secret.yaml
-  - daybreak-app-secrets.yaml
   - fhir-sa.yaml
  # - custom-domain-tls.yaml
  # - custom-domain.yaml
