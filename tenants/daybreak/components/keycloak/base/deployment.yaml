@@ -34,6 +34,8 @@ spec:
             secretKeyRef:
               name: keycloak-init-secrets
               key: KEYCLOAK_ADMIN_PASSWORD
+        - name: KEYCLOAK_IMPORT
+          value: /import/realm.json
         image: quay.io/keycloak/keycloak:21.1.2
         livenessProbe:
           failureThreshold: 100
@@ -58,8 +60,13 @@ spec:
         volumeMounts:
         - mountPath: /opt/keycloak/data
           name: empty
+        - name: keycloak-volume
+          mountPath: /import
       volumes:
       - emptyDir: {}
         name: empty
+      - name: keycloak-volume
+        configMap:
+          name: keycloak-configmap
   triggers:
   - type: ConfigChange

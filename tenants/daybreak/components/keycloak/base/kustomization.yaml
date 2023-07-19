@@ -3,7 +3,8 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - keycloak-init-secrets.yaml
+  - keycloak-init-sealed-secret.yaml
+  - keycloak-configmap.yaml
   - deployment.yaml
   - service.yaml
   - route.yaml
