@@ -1,0 +1,13 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: "daybreak-gitops"
+  labels:
+    name: "daybreak-gitops"
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: "daybreak-dev"
+  labels:
+    name: "daybreak-dev"

@@ -2,9 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+  - initialize-namespaces.yaml
   - ../../tenants/daybreak/tenant/overlays/default
-  - github-pull-secret.yaml
-  - ghcr-guidehouse-secret.yaml
+  - github-pull-sealed-secret.yaml
+  - ghcr-guidehouse-sealed-secret.yaml
   - fhir-sa.yaml
   - zync-sealed-secret.yaml
  # - custom-domain-tls.yaml
