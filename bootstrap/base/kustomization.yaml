@@ -8,5 +8,6 @@ resources:
   - ghcr-guidehouse-sealed-secret.yaml
   - fhir-sa.yaml
   - zync-sealed-secret.yaml
+  - ../../tenants/daybreak/components/keycloak/overlays/default
  # - custom-domain-tls.yaml
  # - custom-domain.yaml
