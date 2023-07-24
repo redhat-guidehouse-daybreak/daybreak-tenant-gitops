@@ -22,20 +22,21 @@ spec:
       - args:
         - start-dev
         env:
-        - name: KC_PROXY
-          value: edge
-        - name: KEYCLOAK_ADMIN
-          valueFrom:
-            secretKeyRef:
-              name: keycloak-init-secrets
-              key: KEYCLOAK_ADMIN
-        - name: KEYCLOAK_ADMIN_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: keycloak-init-secrets
-              key: KEYCLOAK_ADMIN_PASSWORD
-        - name: KEYCLOAK_IMPORT
-          value: /import/realm.json
+          - name: KC_PROXY
+            value: edge
+          - name: KEYCLOAK_ADMIN
+            valueFrom:
+              secretKeyRef:
+                name: keycloak-init-secrets
+                key: KEYCLOAK_ADMIN
+          - name: KEYCLOAK_ADMIN_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: keycloak-init-secrets
+                key: KEYCLOAK_ADMIN_PASSWORD
+        extraEnvVars:
+          - name: KEYCLOAK_EXTRA_ARGS
+            value: "-Dkeycloak.import=/import/realm.json"
         image: quay.io/keycloak/keycloak:21.1.2
         livenessProbe:
           failureThreshold: 100
