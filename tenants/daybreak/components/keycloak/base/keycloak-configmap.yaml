@@ -83,7 +83,6 @@ data:
           "attributes" : { }
         } ],
         "client" : {
-          "c9d9c601" : [ ],
           "realm-management" : [ {
             "id" : "593b231f-0633-4eab-b5c7-4d99289c782e",
             "name" : "view-users",
