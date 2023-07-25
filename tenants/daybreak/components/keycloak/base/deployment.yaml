@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - args:
-        - start-dev
+        - start-dev --import-realm
         env:
           - name: KC_PROXY
             value: edge
@@ -34,9 +34,6 @@ spec:
               secretKeyRef:
                 name: keycloak-init-secrets
                 key: KEYCLOAK_ADMIN_PASSWORD
-        extraEnvVars:
-          - name: KEYCLOAK_EXTRA_ARGS
-            value: "-Dkeycloak.import=/import/realm.json"
         image: quay.io/keycloak/keycloak:21.1.2
         livenessProbe:
           failureThreshold: 100
@@ -62,7 +59,7 @@ spec:
         - mountPath: /opt/keycloak/data
           name: empty
         - name: keycloak-volume
-          mountPath: /import
+          mountPath: /opt/keycloak/data/import
       volumes:
       - emptyDir: {}
         name: empty
