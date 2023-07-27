@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - ../../components/argocd/applications/overlays/default
   - ../../components/argocd/projects/overlays/default
+  - ../../components/fhir-server/overlay
