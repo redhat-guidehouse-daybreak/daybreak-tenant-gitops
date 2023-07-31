@@ -5,5 +5,5 @@ resources:
   - ../../components/argocd/applications/overlays/default
   - ../../components/argocd/projects/overlays/default
   - 3scale-namespace.yaml
-  - 3scalpe-app-proj.yaml
+  - 3scale-app-proj.yaml
   - 3scale-app.yaml
