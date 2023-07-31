@@ -5,6 +5,5 @@ resources:
   - initialize-namespaces.yaml
   - ../../tenants/daybreak/tenant/overlays/default
   - github-pull-sealed-secret.yaml
-  - ghcr-guidehouse-sealed-secret.yaml
   - zync-sealed-secret.yaml
   - ../../tenants/daybreak/components/keycloak/overlays/default

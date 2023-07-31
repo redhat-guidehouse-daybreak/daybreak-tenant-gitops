@@ -7,7 +7,7 @@ argocd:
       g, pipeline, role:admin
     scopes: "[accounts,groups]"
   projects:
-    - name: daybreak-dev
+    - name: daybreak
       destinations:
         - server: https://kubernetes.default.svc
-          namespace: daybreak-dev
+          namespace: daybreak-gitops

@@ -4,4 +4,6 @@ kind: Kustomization
 resources:
   - ../../components/argocd/applications/overlays/default
   - ../../components/argocd/projects/overlays/default
-  - ../../components/fhir-server/overlay
+  - 3scale-namespace.yaml
+  - 3scalpe-app-proj.yaml
+  - 3scale-app.yaml
