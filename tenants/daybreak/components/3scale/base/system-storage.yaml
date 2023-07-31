@@ -5,7 +5,6 @@ metadata:
   annotations:
     volume.beta.kubernetes.io/storage-provisioner: ebs.csi.aws.com
     volume.kubernetes.io/storage-provisioner: ebs.csi.aws.com
-  namespace: 3scale
   finalizers:
     - kubernetes.io/pvc-protection
   labels:

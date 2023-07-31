@@ -2,7 +2,6 @@ apiVersion: capabilities.3scale.net/v1beta1
 kind: DeveloperAccount
 metadata:
   name: daybreak
-  namespace: 3scale
 spec:
   orgName: daybreak
 ---
@@ -10,7 +9,6 @@ apiVersion: capabilities.3scale.net/v1beta1
 kind: DeveloperUser
 metadata:
   name: daybreak
-  namespace: 3scale
 spec:
   developerAccountRef:
     name: daybreak

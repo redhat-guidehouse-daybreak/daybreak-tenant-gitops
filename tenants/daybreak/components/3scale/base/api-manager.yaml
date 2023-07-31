@@ -2,6 +2,5 @@ apiVersion: apps.3scale.net/v1alpha1
 kind: APIManager
 metadata:
   name: apimanager-guidehouse
-  namespace: 3scale
 spec:
   wildcardDomain: patch-me 
