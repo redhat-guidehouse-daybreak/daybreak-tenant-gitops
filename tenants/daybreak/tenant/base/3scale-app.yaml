@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: 3scale-app
   source:
-    path: tenent/daybreak/components/3scale/overlay/default
+    path: tenant/daybreak/components/3scale/overlay/default
     repoURL: patch-me-see-tenant-overlays
     targetRevision: patch-me-see-tenant-overlays
   syncPolicy:
