@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  annotations:
-    openshift.io/description: "3scale project"
-    openshift.io/display-name: "3scale"
-  name: 3scale
