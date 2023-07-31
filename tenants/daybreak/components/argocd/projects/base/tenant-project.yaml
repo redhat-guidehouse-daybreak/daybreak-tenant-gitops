@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: daybreak-tenant
-  namespace: daybreak-gitops
+  namespace: openshift-gitops
 spec:
   clusterResourceWhitelist:
     - group: '*'
