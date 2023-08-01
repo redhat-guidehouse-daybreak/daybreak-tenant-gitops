@@ -25,6 +25,11 @@ gitops-tenant:
       nameOverride: ""
       adminGroupRole: admin
       createOperatorGroup: true
+    - nameSuffix: test
+      role: test
+      nameOverride: ""
+      adminGroupRole: admin
+      createOperatorGroup: true
 
   additionalRoles:
     - name: sealed-secrets-deployer
