@@ -15,3 +15,11 @@ spec:
     automated:
       prune: false
       selfHeal: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
+      - Replace=false
+  ignoreDifferences:
+    - group: bitnami.com
+      kind: SealedSecret
+      jsonPointers:
+        - type
