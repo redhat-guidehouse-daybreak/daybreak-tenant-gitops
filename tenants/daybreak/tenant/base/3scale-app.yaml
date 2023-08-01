@@ -22,4 +22,4 @@ spec:
     - group: bitnami.com
       kind: SealedSecret
       jsonPointers:
-        - type
+        - /metadata/type
