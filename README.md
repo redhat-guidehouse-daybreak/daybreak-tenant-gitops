@@ -24,10 +24,6 @@ Make sure you are [logged into your cluster](https://docs.openshift.com/online/p
 
 The scripts require a user with sufficient permissions for installing and configuring operators, typically the `opentlc-mgr` user account on a Red Hat Demo System hosted cluster.
 
-## Custom Domain
-The default custom domain for the cluster is `apps.<cluster-name>.....openshiftapps.com`. You can get this by executing `oc describe ingresscontroller default -n openshift-ingress-operator`
-Before you run bootstrap for daybreak-tenant-gtops, you must update `tenant/daybreak/components/3scale/overlay/default/patch-domain.yaml` with the correct domain name
-
 ## Running the Cluster Bootstrap
 
 Execute the bootstrap script to begin the installation process:
