@@ -6,14 +6,7 @@ gitops-tenant:
       - opentlc-mgr
       - user1
       - admin
-      - 00u8gpqtztDpjYK2d1d7
-      - 00u8gpsyahAohQBVS1d7
-      - 00u2nlx2i5ClSceXk1d7
-      - 00u2nlwot8ofWfbMy1d7
-      - cpeng@guidehouse.com
-      - joshua.geissler@guidehouse.com
-      - bspiva@redhat.com
-      - jhurlock@redhat.com
+      - vacopengc
 
 
   namespaces:
@@ -27,6 +20,11 @@ gitops-tenant:
       createOperatorGroup: true
     - nameSuffix: test
       role: test
+      nameOverride: ""
+      adminGroupRole: admin
+      createOperatorGroup: true
+    - nameSuffix: prod
+      role: prod
       nameOverride: ""
       adminGroupRole: admin
       createOperatorGroup: true

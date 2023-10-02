@@ -3,5 +3,7 @@ kind: Kustomization
 
 resources:
   - daybreak-tenant-app-of-apps.yaml
-  - daybreak-tenant-argocd.yaml
   - daybreak-tenant-projects.yaml
+  - 3scale-application.yaml
+  - keycloak-application.yaml
+  - psql-application.yaml
