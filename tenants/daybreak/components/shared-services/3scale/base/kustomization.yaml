@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
   - system-storage.yaml
   - api-manager.yaml
-  - developer-user-sealed-secret.yaml
+#  - developer-user-sealed-secret.yaml
+  - developer-user-secret.yaml
   - account.yaml
