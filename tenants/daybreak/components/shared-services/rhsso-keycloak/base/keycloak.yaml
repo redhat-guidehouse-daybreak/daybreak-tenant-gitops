@@ -1,0 +1,11 @@
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  name: example-sso
+  labels:
+    app: sso
+  namespace: daybreak-gitops
+spec:
+  instances: 1
+  externalAccess:
+    enabled: True

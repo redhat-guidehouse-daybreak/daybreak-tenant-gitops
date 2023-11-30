@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - daybreak-tenant-app-of-apps.yaml
+#  - daybreak-tenant-app-of-apps.yaml
   - daybreak-tenant-projects.yaml
   - 3scale-application.yaml
   - keycloak-application.yaml
